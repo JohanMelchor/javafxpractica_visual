@@ -41,6 +41,11 @@ public class mensajeController {
             textoEstado.setText("No ha seleccionado una opción");
             return; 
         }
+        if(mensaje == null || mensaje.isEmpty()){
+            textoEstado.setText("No se ha escrito un mensaje");
+            return;
+        }
+
         if(opcion.equalsIgnoreCase("Email")){
             textoEstado.setText("Tipo de notificacion: "+opcion+"\nmensaje: "+mensaje);
             }else{
