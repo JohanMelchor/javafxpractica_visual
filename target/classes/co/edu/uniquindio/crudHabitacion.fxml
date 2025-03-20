@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.controller.crudHabitacionController">
+   <children>
+      <SplitPane dividerPositions="0.4849246231155779" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+               <Label layoutX="8.0" layoutY="35.0" text="Número habitación:">
+                  <font>
+                     <Font size="15.0" />
+                     </font>
+               </Label>
+               <Label layoutX="305.0" layoutY="35.0" text="Tipo de Habitación:">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Label>
+               <Label layoutX="4.0" layoutY="113.0" text="Precio de habitación:">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Label>
+               <Label layoutX="335.0" layoutY="76.0" text="Disponibilidad:">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Label>
+               <Label layoutX="58.0" layoutY="76.0" text="Descripción:">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="txtNumero" layoutX="150.0" layoutY="33.0" />
+               <TextField fx:id="txtDescripcion" layoutX="150.0" layoutY="74.0" />
+               <TextField fx:id="txtPrecio" layoutX="150.0" layoutY="111.0" />
+               <ChoiceBox fx:id="ChTipoHabitacion" layoutX="440.0" layoutY="33.0" prefWidth="150.0" />
+               <ChoiceBox fx:id="ChDisponibilidad" layoutX="440.0" layoutY="74.0" prefWidth="150.0" />
+               <Button fx:id="btnAgregar" layoutX="150.0" layoutY="151.0" mnemonicParsing="false" onAction="#OnAgregar" text="Agregar">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Button>
+               <Button fx:id="btnEliminar" layoutX="370.0" layoutY="151.0" mnemonicParsing="false" onAction="#OnEliminar" text="Eliminar">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Button>
+               <Button fx:id="btnActualizar" layoutX="257.0" layoutY="151.0" mnemonicParsing="false" onAction="#OnActualizar" text="Actualizar">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Button>
+            </children>
+         </AnchorPane>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="39.0" prefWidth="598.0">
+               <children>
+                  <TableView fx:id="tableHabitaciones" layoutY="-2.0" prefHeight="200.0" prefWidth="600.0">
+                     <columns>
+                        <TableColumn fx:id="tbNumero" prefWidth="100.0" text="N°habitación" />
+                        <TableColumn fx:id="tbDescripcion" prefWidth="226.0" text="Descripción" />
+                        <TableColumn fx:id="tbPrecio" prefWidth="82.0" text="Precio" />
+                        <TableColumn fx:id="tbTipoHabitacion" prefWidth="91.0" text="Tipo" />
+                        <TableColumn fx:id="tbDisponibilidad" prefWidth="100.0" text="Disponibilidad" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

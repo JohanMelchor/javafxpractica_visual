@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.controller.mensajeController">
+   <children>
+      <Button fx:id="btnEnviar" layoutX="253.0" layoutY="243.0" mnemonicParsing="false" onAction="#OnEnviar" text="Enviar mensaje" />
+      <ChoiceBox fx:id="chMensaje" layoutX="300.0" layoutY="78.0" prefWidth="150.0" />
+      <Label layoutX="154.0" layoutY="80.0" text="Tipo de notificacion:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="163.0" layoutY="156.0" text="Escribe el Mensaje:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMensaje" layoutX="301.0" layoutY="154.0" />
+      <Label fx:id="textoEstado" alignment="CENTER" contentDisplay="CENTER" layoutX="162.0" layoutY="312.0" prefHeight="64.0" prefWidth="276.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

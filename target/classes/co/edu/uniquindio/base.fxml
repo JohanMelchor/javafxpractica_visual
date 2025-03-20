@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.controller.baseController">
+  <children>
+    <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Mensajes">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="610.0" prefWidth="744.0">
+              <children>
+                  <SplitPane orientation="VERTICAL" prefHeight="373.0" prefWidth="600.0">
+                     <items>
+                       <fx:include source="mensaje.fxml" />
+                     </items>
+                 </SplitPane>
+               </children>
+             </AnchorPane>
+           </content>
+         </Tab>
+         <Tab text="Crud Habitacion">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="610.0" prefWidth="744.0">
+              <children>
+                <SplitPane orientation="VERTICAL" prefHeight="373.0" prefWidth="600.0">
+                  <items>
+                    <fx:include source="crudHabitacion.fxml" />
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
