@@ -125,12 +125,18 @@ public class crudHabitacionController {
         if (!validarCampos()) {
             return;
         }
+        Habitacion habitacionExistente = null;
         String numero = txtNumero.getText();
         for(Habitacion habitacion : listaHabitaciones){
             if(habitacion.getNumero().equalsIgnoreCase(numero)){
-                listaHabitaciones.remove(habitacion);
+                habitacionExistente = habitacion;
                 break;
             }
+        }
+        if (habitacionExistente == null) {
+            mostrarAlerta("Error", "La habitación que intenta eliminar no existe.");
+        } else {
+            listaHabitaciones.remove(habitacionExistente);
         }
     }
 
